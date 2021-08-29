@@ -13,8 +13,8 @@ const displayCovid = Countries => {
         div.innerHTML = `<div class="card h-100">
                         <h5 class="card-header text-center text-muted">Country Information</h5>
                         <div class="card-body">
-                            <h5 class="card-title">NewConfirmed: <span class = "text-white bg-success p-1 rounded fs-6">${country.Country}</span></h5>
-                            <h5 class="card-title">NewConfirmed: ${country.CountryCode}</h5>
+                            <h5 class="card-title">Country: <span class = "text-white bg-success p-1 rounded fs-6">${country.Country}</span></h5>
+                            <h5 class="card-title">CountryCode: ${country.CountryCode}</h5>
                             <h5 class="card-title">NewConfirmed: ${country.NewConfirmed}</h5>
                             <h5 class="card-title">NewDeaths: ${country.NewDeaths}</h5>
                             <h5 class="card-title">NewRecovered: ${country.NewRecovered}</h5>
