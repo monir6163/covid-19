@@ -40,7 +40,6 @@
                     rgba(41, 187, 137, 0.75)), url(https://covid19-alif.netlify.app/images/banner.jpg);
             height: 100vh;
             color: #fff;
-            padding: 3rem;
             position: relative;
         }
     </style>
@@ -49,15 +48,16 @@
 <body>
     <div class="container">
         <h2 class="text-center text-white mt-5">Covid-19 Result</h2>
-        <div class="input-group mb-3 mt-5 mx-auto">
-            <input type="text" class="form-control" id="search-country" placeholder="Search Country Nmae"
-                aria-describedby="button-addon2">
-            <button onclick="loadcovid()" class="btn btn-info text-white" type="button" id="button-search">Search
-                Country Name</button>
+        <div class="row">
+            <div class="input-group mb-3 mt-5 w-100">
+                <input type="text" class="form-control" id="search-country" placeholder="Search Country Nmae"
+                    aria-describedby="button-addon2">
+                <button onclick="loadcovid()" class="btn btn-info text-white" type="button" id="button-search">Search
+                </button>
+                <div id="error-message"></div>
+                <div id="not-found"></div>
+            </div>
         </div>
-        <div id="error-message"></div>
-        <div id="not-found"></div>
-        <div id="not-found"></div>
         <section id="covid-result">
             <img id="poster" class="poster mx-auto my-5" src="https://covid19-alif.netlify.app/images/yellow-poster.png"
                 alt="" />
