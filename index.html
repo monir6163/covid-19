@@ -8,14 +8,60 @@
     <title>Covid-19 Api Data</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        .result {
+            width: max-content;
+            margin: 2rem auto;
+            color: #1e6f5c;
+        }
+
+        .poster {
+            display: block;
+            width: 50%;
+        }
+
+        h3 {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            background-image: linear-gradient(to right bottom,
+                    rgba(255, 255, 255, 0.65),
+                    rgba(255, 255, 255, 0.85));
+            border-bottom: 3px solid darkslategray;
+            border-radius: 3px;
+            margin: 0.8rem 0;
+            text-align: center;
+            color: #000;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom,
+                    rgba(30, 111, 92, 0.75),
+                    rgba(41, 187, 137, 0.75)), url(https://covid19-alif.netlify.app/images/banner.jpg);
+            height: 100vh;
+            color: #fff;
+            padding: 3rem;
+            position: relative;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <h2 class="text-center text-success mt-5">Covid-19 Result</h2>
-        <div class="row mt-5 g-5" id="covid-result">
-
+        <h2 class="text-center text-white mt-5">Covid-19 Result</h2>
+        <div class="input-group mb-3 mt-5 mx-auto">
+            <input type="text" class="form-control" id="search-country" placeholder="Search Country Nmae"
+                aria-describedby="button-addon2">
+            <button onclick="loadcovid()" class="btn btn-info text-white" type="button" id="button-search">Search
+                Country Name</button>
         </div>
+        <div id="error-message"></div>
+        <div id="not-found"></div>
+        <div id="not-found"></div>
+        <section id="covid-result">
+            <img id="poster" class="poster mx-auto my-5" src="https://covid19-alif.netlify.app/images/yellow-poster.png"
+                alt="" />
+        </section>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
